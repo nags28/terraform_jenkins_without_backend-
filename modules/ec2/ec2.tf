@@ -1,5 +1,6 @@
 resource "aws_instance" "ec2_pro" {
    // availability_zone = "${var.availability_zones}"
+    availability_zone = "us-east-2a"
     ami ="${var.ami}"
     instance_type = "${var.instance_type}"
     key_name= "control_server"
