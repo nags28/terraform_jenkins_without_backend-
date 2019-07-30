@@ -1,7 +1,7 @@
 module "ec2" {
   source = "../../modules/ec2"
   region = "${var.region}"
-  availability_zones = "us-east-2a"
+  //availability_zones = "us-east-2a"
   ami ="${var.ami}"
   instance_type = "${var.instance_type}"
   //kms_key_id = "${data.aws_kms_alias.kms.arn}"
