@@ -18,8 +18,10 @@ pipeline {
 		 steps {
 
                 script {
-                    if (params.env == 'dev')
-                        sh "make $INFRA_ACTION"
+			sh 'chmod +x infra.sh'
+                       if (params.env == 'dev')
+			sh 'AWS_ACCOUNT_ID=378808291776  ./infra.sh'
+                       
                 }
             }
 		
