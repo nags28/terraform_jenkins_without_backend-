@@ -15,7 +15,7 @@ pipeline {
 	    
 	    stage('git') {
             steps {
-                  git ''
+                  git 'https://github.com/nags28/game-of-life.git'
                  }
                  }// stage git
      stage('build'){
