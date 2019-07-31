@@ -55,7 +55,7 @@ pipeline {
 		sh "chmod 777 ec2.ini" 
 		sh "./ec2.py --list --profile default --refresh-cache"
 		sh "ansible -i ec2.py -u ubuntu tag_ec2_pro -m ping "
-		sh "ansible-playbook -i ec2.py -u ubuntu  ansi.yml"
+		sh "ansible-playbook -i ec2.py -u ec2-user  ansi.yml"
 		
 		} 
 }
