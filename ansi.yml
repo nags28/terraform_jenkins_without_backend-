@@ -1,4 +1,4 @@
-- hosts: tag_ec2_pro
+- hosts: tag_ ec2_manual
   become: yes
   tasks:
   - name: updating packges and install tomcat
