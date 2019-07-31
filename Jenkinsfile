@@ -1,3 +1,4 @@
+    
 #!groovy
 
 pipeline {
@@ -41,10 +42,9 @@ pipeline {
             }
 		
         }
-    }//stages
- 
-}//pipeline
-stage('Deploy') {
+		
+		
+		stage('Deploy') {
 	
 	when {
     expression { 
@@ -62,6 +62,9 @@ stage('Deploy') {
 		
 		} 
 }
-
+		
+    }//stages
+ 
+}//pipeline
 
 
