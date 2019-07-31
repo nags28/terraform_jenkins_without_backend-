@@ -33,7 +33,7 @@ pipeline {
 		 steps {
 
                 script {
-			sh 'chmod +x infra.sh'
+			sh 'chmod 777 infra.sh'
                        if (params.env == 'dev')
 			sh 'AWS_ACCOUNT_ID=378808291776  ./infra.sh'
                        
