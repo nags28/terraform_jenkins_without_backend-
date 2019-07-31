@@ -58,7 +58,7 @@ stage('Deploy') {
 		sh "chmod 777 ec2.ini" 
 		sh "./ec2.py --list --profile default --refresh-cache"
 		sh "ansible -i ec2.py -u ubuntu tag_Env_DEV_EC2 -m ping "
-		sh "ansible-playbook -i ec2.py -u ubuntu   tomcat.yml"
+		sh "ansible-playbook -i ec2.py -u ubuntu   "
 		
 		} 
 }
