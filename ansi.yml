@@ -5,6 +5,7 @@
     yum:
      update_cache: yes
      name: tomcat8
+    become: yes
   - name: copying war file
     copy:
      src: var/lib/jenkins/workspace/terraform_without_backend/gameoflife-web/target/gameoflife.war
