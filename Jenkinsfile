@@ -11,6 +11,18 @@ pipeline {
         choice(name: 'action', choices: 'init\nplan\napply\nplan-destroy\ndestroy', description: 'Select Action')
     }
     stages {
+	    
+	    
+	    stage('git') {
+            steps {
+                  git ''
+                 }
+                 }// stage git
+     stage('build'){
+            steps  {
+                     sh 'mvn package'
+                   }
+     }//stage build
 	
         stage('terraform') {
             environment {
