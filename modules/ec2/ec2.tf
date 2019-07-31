@@ -5,6 +5,10 @@ resource "aws_instance" "ec2_pro" {
     instance_type = "${var.instance_type}"
     key_name= "control_server"
     security_groups= ["${aws_security_group.ALLTRAFFIC.name}"]
+   tags = {
+    Name      = "ec2_pro"
+   
+  }
     
 }
 resource "aws_security_group" "ALLTRAFFIC" {
