@@ -61,10 +61,7 @@ stage('Deploy') {
 		sh "ansible-playbook -i ec2.py -u ubuntu   tomcat.yml"
 		
 		} 
-}//stage deploy    
-	    
+}
 
-}//stages   
- 
-}//pipeline   
-	     
+}
+}
