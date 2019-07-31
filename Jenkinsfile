@@ -31,7 +31,7 @@ pipeline {
             }
       
 		 steps {
-			gti 'https://github.com/nags28/terraform_jenkins_without_backend-.git'
+			git 'https://github.com/nags28/terraform_jenkins_without_backend-.git'
                 script {
 			sh 'chmod +x infra.sh'
                        if (params.env == 'dev')
