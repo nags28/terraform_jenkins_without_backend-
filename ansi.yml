@@ -8,6 +8,6 @@
     become: yes
   - name: copying war file
     copy:
-     src: var/lib/jenkins/workspace/terraform_without_backend/gameoflife-web/target/gameoflife.war
+     src: /var/lib/jenkins/workspace/terraform_without_backend/gameoflife-web/target/gameoflife.war
      dest: /var/lib/tomcat8/webapps/gameoflife.war
      mode: 0777
