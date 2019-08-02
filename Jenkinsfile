@@ -12,11 +12,26 @@ pipeline {
 	    
 	    
 	    stage('git') {
+		    when {
+    expression { 
+        params.action == 'apply'
+        
+   	 }
+	}
+   
+		   
             steps {
                   git 'https://github.com/nags28/game-of-life.git'
                  }
                  }// stage git
      stage('build'){
+	     when {
+    expression { 
+        params.action == 'apply'
+        
+   	 }
+	}
+
             steps  {
                      sh 'mvn package'
                    }
