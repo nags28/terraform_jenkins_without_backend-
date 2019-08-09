@@ -3,7 +3,7 @@ resource "aws_alb" "alb-demo" {
   internal           = false
   load_balancer_type = "application"
   subnets            = "${var.subnets}"
-  security_groups    = ["${aws_security_group.asg-alb.id}"]
+  security_groups    = ["${aws_security_group.ALLTRAFFIC.id}"]
   depends_on =["aws_launch_configuration.launch_conf"]
  
 }
