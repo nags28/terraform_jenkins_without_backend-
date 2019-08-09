@@ -3,7 +3,7 @@ resource "aws_launch_configuration" "launch_conf" {
   image_id      = "${var.image_id}"
   instance_type = "${var.instance_type}"
   key_name      = "${var.key_name}"
-  security_groups = ["${aws_security_group.asg-alb.name}"]
+  security_groups = ["${aws_security_group.ALLTRAFFIC.name}"]
 
    user_data = <<-EOF
               #!/bin/bash
@@ -29,7 +29,7 @@ resource "aws_autoscaling_group" "asg" {
   launch_configuration = "${aws_launch_configuration.launch_conf.name}"
   min_size             = 2
   max_size             = 3
-  availability_zones   =["${var.availability_zones}"]
+  availability_zones   = "us-east-2a"
   target_group_arns       = ["${aws_alb_target_group.albtarget.arn}","${aws_alb_target_group.albtarget1.arn}"]
   depends_on           =["aws_launch_configuration.launch_conf","aws_alb.alb-demo"]
   tags = [{

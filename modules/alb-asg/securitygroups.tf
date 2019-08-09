@@ -1,5 +1,5 @@
-resource "aws_security_group" "asg-alb" {
-  name = "asg-alb"
+resource "aws_security_group" "ALLTRAFFIC" {
+  name = "ALLTRAFFIC"
 
   ingress {
     from_port   = 0
