@@ -29,7 +29,7 @@ resource "aws_autoscaling_group" "asg" {
   launch_configuration = "${aws_launch_configuration.launch_conf.name}"
   min_size             = 2
   max_size             = 3
-  availability_zones   = "us-east-2a"
+  availability_zones   = ["us-east-2a"]
   target_group_arns       = ["${aws_alb_target_group.albtarget.arn}","${aws_alb_target_group.albtarget1.arn}"]
   depends_on           =["aws_launch_configuration.launch_conf","aws_alb.alb-demo"]
   tags = [{
