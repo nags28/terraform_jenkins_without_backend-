@@ -4,9 +4,9 @@ variable "instance_type" {
 variable "key_name" {
   description="keyname to attach to the instances"
 }
-variable "availability_zones" {
-  description="availability_zones for auto scaling group"
-}
+//variable "availability_zones" {
+//  description="availability_zones for auto scaling group"
+//}
 
 variable "name_prefix" {
 description ="name of launch configuration"
