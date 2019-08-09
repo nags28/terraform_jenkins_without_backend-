@@ -57,3 +57,22 @@ variable "password" {
 //   type = "string"
 //}
 
+variable "name_prefix" {
+description ="name of launch configuration"
+}
+
+variable "image_id" {
+  description ="ami to attach autoscaling group"
+}
+
+
+variable "subnets" {
+  description= "list of subnets"
+}
+variable "certificate_arn" {
+  default="https self signed certificate arn"
+}
+
+variable "ssl_policy" {
+  description="ssl policy"
+}
