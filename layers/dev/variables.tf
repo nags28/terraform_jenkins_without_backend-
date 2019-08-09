@@ -76,3 +76,7 @@ variable "certificate_arn" {
 variable "ssl_policy" {
   description="ssl policy"
 }
+variable "key_name" {
+    description = "keyname"
+  
+}
