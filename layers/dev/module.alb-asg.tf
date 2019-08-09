@@ -1,4 +1,4 @@
-module "asg_and_alb" {
+module "alb-asg" {
   source = "../../modules/alb-asg"
   name_prefix            = "${var.name_prefix}"
   image_id               = "${var.image_id}"
