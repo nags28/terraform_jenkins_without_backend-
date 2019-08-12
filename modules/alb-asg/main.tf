@@ -3,7 +3,7 @@ resource "aws_launch_configuration" "launch_conf" {
   image_id      = "${var.image_id}"
   instance_type = "${var.instance_type}"
  // key_name      = "${var.key_name}"
-  security_groups = ["${aws_security_group.ALLTRAFFIC.name}"]
+  security_groups = ["${aws_security_group.ALLTRAFFIC1.name}"]
 
    user_data = <<-EOF
               #!/bin/bash
