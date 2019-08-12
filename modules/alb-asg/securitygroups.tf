@@ -1,4 +1,4 @@
-resource "aws_security_group" "ALLTRAFFIC" {
+resource "aws_security_group" "ALLTRAFFIC1" {
   name = "ALLTRAFFIC"
 
   ingress {

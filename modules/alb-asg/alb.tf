@@ -5,8 +5,10 @@ resource "aws_alb" "alb-demo" {
   subnets            = "${var.subnets}"
   security_groups    = ["${aws_security_group.ALLTRAFFIC.id}"]
   depends_on =["aws_launch_configuration.launch_conf"]
- 
+  
 }
+
+
 
 
 resource "aws_alb_listener" "alb-list" {
