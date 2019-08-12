@@ -1,5 +1,5 @@
 resource "aws_security_group" "ALLTRAFFIC1" {
-  name = "ALLTRAFFIC"
+  name = "ALLTRAFFIC1"
 
   ingress {
     from_port   = 0
